@@ -4,6 +4,7 @@ public class EmployeeWageUs
   {
 	  int IsPresent=1;
 	  double empCheck = Math.floor(Math.random() * 10) % 2;
+
 	  int RatePerHr=20;
 	  int Hr=8;
 	  int Salary=RatePerHr*Hr;
@@ -12,8 +13,7 @@ public class EmployeeWageUs
 	  {
 		  System.out.println("Employee is Present");
 		  System.out.println("Salary="+Salary);
-
-	  }
+    }
 	  else
 	  {
 		  System.out.println("Employee is Abscent");
@@ -23,12 +23,14 @@ public class EmployeeWageUs
   }
   
   
+	 
+
 	public static void main(String[] args) 
 	{
       System.out.println("Welcometo Employee Wage Computation Program");
       EmployeeWageUs obj=new EmployeeWageUs();
       obj.EmployeeWageUC1();
-      
+
 	}
 
 }
