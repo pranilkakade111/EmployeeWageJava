@@ -5,6 +5,7 @@ public class EmployeeWageUs
   {
 	  int IsPresent=1;
 	  double empCheck = Math.floor(Math.random() * 10) % 2;
+	  
 	  if(IsPresent==empCheck)
 	  {
 		  System.out.println("Employee is Present");
