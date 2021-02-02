@@ -46,6 +46,12 @@ public class EmployeeWageUs
                    obj2.EmployeeUC3();
                    break;
                    
+    	  case 3: System.out.println("To calculate Monthly employee wage");
+    	          CalculateMonthWage obj3=new CalculateMonthWage();
+    	          obj3.EmployeeUC5();
+    	          break;
+    	          
+                   
     	  default: System.out.println("Wrong Selection");
     	            break;
       }  
@@ -79,4 +85,37 @@ class EmployeePartTime
 		 int Salary=RatePerHr*Hr;
 		 System.out.println("Salary="+Salary);
 	}   
+}
+
+class CalculateMonthWage
+{
+	public void EmployeeUC5() 
+	{
+		int PartTime=1;
+		int FullTime=2;
+		int RatePerHr=20;
+		int Hr=0;
+		int DaysInMonth=20;
+		int totalEmpWage=0;
+		for(int days=0;days<DaysInMonth;days++)
+		{
+		double empCheck = Math.floor(Math.random() * 10) % 3;
+		if(FullTime==empCheck)
+		{
+			 Hr=8;
+		}
+		else if(PartTime==empCheck)
+		{
+			 Hr=4;
+		}
+		else
+		{
+			System.out.println("Salary=0");
+		}
+		 int Salary=RatePerHr*Hr;
+		 totalEmpWage += Salary;
+		 System.out.println("Salary="+Salary);
+	  }
+		System.out.println("Total Employee Wage"+totalEmpWage);
+ }
 }
