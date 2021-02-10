@@ -54,6 +54,12 @@ public class EmployeeWageUs
     	          obj4.employeeWageUC6();
     	          break;
     	          
+    	  case 5: System.out.println("To calculate employee wage For multiple companies ");
+    	          EmployeeWageMultipleComp obj5=new EmployeeWageMultipleComp();
+    	          obj5.UC8("dxc", 12, 6,40);
+    	          obj5.UC8("digt", 20, 10,90);
+    	          break;
+    	          
     	  default: System.out.println("Wrong Selection");
     	           break;
       }  
@@ -131,13 +137,14 @@ class EmployeeWageHrs
 		int RatePerHr=20;
 		int Hr=0;
 		int DaysInMonth=20;
-		int MaxHrs=100;
+		int MaxHrs=12;
 		int totalEmpWage=0;
 		int totalhrs=0;
 		int totalworkingday=0;
 		int totalemphr=0;
 		while(totalhrs <= MaxHrs && totalworkingday < DaysInMonth)
 		{
+			totalworkingday++;
 		double empCheck = Math.floor(Math.random() * 10) % 3;
 		if(FullTime==empCheck)
 		{
@@ -156,5 +163,66 @@ class EmployeeWageHrs
 	  }
 		totalEmpWage = totalemphr*RatePerHr;
 		System.out.println("Total Employee Wage"+totalEmpWage);	
+	}
+}
+
+class EmployeeWageMultipleComp
+{
+	 int full=1;
+     int part=2;
+    
+     int fulltime;
+     int parttime;
+     StringBuilder companyname=new StringBuilder();
+     //static int totalsalary
+    	 
+     int WagePerHour;
+     //int fullDayHour=12;
+    // int partDayHour=8;
+     int time;
+     int days;
+     int  totalsalary;
+	public void UC8(String companyname,int fulltime, int parttime,int WagePerHour)
+	{
+		/**StringBuilder st= this.companyname;
+   	 int f=this.fulltime;
+   	 int p=this.parttime;
+   	 int w=this.WagePerHour;
+   	 **/
+   	 for(int d=0 ; d<=20 ; d++)
+        {
+     	while(time<=100)
+     	{
+     		 int check = (int) (Math.floor(Math.random()*10)%3);
+     	    	System.out.println(check);
+     	    	 if(check==full)
+     	         {   
+     	         	System.out.println("employee is present in full time");
+     	         	time=time+fulltime;
+     	         	System.out.println(time);
+     	         	
+     	         	
+     	         }
+     	         
+     	         else if(check==part)
+     	         {
+     	         	System.out.println("employee present is part time");
+     	         	time=time+parttime;
+     	         	System.out.println(time);
+     	         }
+     	         
+     	         else
+     	         {
+     	         	System.out.println("employyee is absent");
+     	         	time=time+0;
+     	         	System.out.println(time);
+     	         }
+     		
+     	}
+     	
+        }
+   	 totalsalary=time*WagePerHour;
+        System.out.println("employee total salary is " +totalsalary);
+   
 	}
 }
